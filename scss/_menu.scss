@@ -17,7 +17,7 @@ $portrait-image: url(../img/cat2.jpg);
 		@include easeOut;
 	}
 
-	// Rotate Into a triangle With Menu Lines
+	// Rotate Into a Triangle With Menu Lines
 	&.close {
 		transform: rotate(180deg);
 
@@ -73,7 +73,7 @@ $portrait-image: url(../img/cat2.jpg);
 		@include easeOut;
 
 		&.show {
-			// Slide in from top
+			// Slide in from right
 			transform: translate3d(0, 0, 0);
 
 		}
@@ -86,7 +86,7 @@ $portrait-image: url(../img/cat2.jpg);
 		@include easeOut;
 		
 		&.show {
-			// Slide in from bottom
+			// Slide in from left
 			transform: translate3d(0, 0, 0);
 		}
 
@@ -95,7 +95,7 @@ $portrait-image: url(../img/cat2.jpg);
 			height: 250px;
 			background: $portrait-image;
 			border-radius: 50%;
-			border: solid 3px $secondary-color;
+			border: solid 3px rgb(0, 0, 0);
 		}
 	}
 

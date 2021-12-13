@@ -57,7 +57,7 @@
       height: 250px;
       background: url(../img/cat2.jpg);
       border-radius: 50%;
-      border: solid 3px #2f00af; }
+      border: solid 3px black; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
@@ -115,7 +115,11 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(132, 220, 255, 0.7); }
+      background: rgba(132, 220, 255, 0.6); }
+  body#bg-img-light {
+    background: url(../img/background2.jpg);
+    background-attachment: fixed;
+    background-size: cover; }
 
 h1, h2, h3 {
   margin: 0;
@@ -182,7 +186,8 @@ main {
   grid-area: job3; }
 
 .job {
-  background: #84dcff;
+  text-align: center;
+  background: #4b99ff;
   padding: 0.5rem;
   border-bottom: #2f00af 5px solid;
   font-size: 1.1rem; }
@@ -195,7 +200,7 @@ main {
     width: 100%;
     border: 3px #fff solid; }
     .projects img:hover {
-      opacity: 0.5;
+      opacity: 0.8;
       border-color: #2f00af;
       transition: all 0.5s ease-out; }
 
@@ -262,24 +267,25 @@ main {
       padding: 0.5rem 1.5;
       background: #2f00af;
       color: #fff; }
+      .boxes div:hover span {
+        color: #fff; }
 
 .btn, .btn-dark, .btn-light {
   display: block;
   padding: 0.5rem 1rem;
-  border: 0;
   margin-bottom: 0.3rem; }
-  .btnhover {
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
     background: #2f00af;
     color: #fff; }
-    .btnhover span {
-      color: #fff; }
 
 .btn-dark {
   background: #005e84;
+  border: #fff 2px solid;
   color: #fff; }
 
 .btn-light {
   background: white;
+  border: #333 2px solid;
   color: #333; }
 
 #main-footer {
@@ -328,8 +334,13 @@ main {
     grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh; }
+  main {
+    padding: 2rem; }
+    main #home h1 {
+      margin-top: 10vh; }
+    main .lg-heading {
+      margin-top: 1rem;
+      font-size: 5rem; }
   .projects {
     grid-template-columns: 1fr; }
   .pimg1, .pimg2, .pimg3 {

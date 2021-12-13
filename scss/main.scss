@@ -26,7 +26,7 @@ h1, h2, h3 {
 	&.sm-heading {
 		margin-bottom: 2rem;
 		padding: 0.2rem 1rem;
-		background: rgb(0, 0, 0);//rgba(lighten($primary-color, 2), 0.5);
+		background: rgb(0, 0, 0);
 		color:#fff;
 	}
 }
@@ -106,7 +106,8 @@ main {
 }
 
 .job {
-	background: lighten($primary-color, 0);
+	text-align: center;
+	background: rgb(75, 153, 255);
 	padding: 0.5rem;
 	border-bottom: $secondary-color 5px solid;
 	font-size: 1.1rem;
@@ -123,7 +124,7 @@ main {
 		border: 3px #fff solid;
 
 		&:hover {
-			opacity: 0.5;
+			opacity: 0.8;
 			border-color: $secondary-color;
 			@include easeOut
 		}
@@ -131,7 +132,7 @@ main {
 }
 
 // More work
-.pimg1, .pimg2, .pimg3{
+.pimg1, .pimg2, .pimg3 {
 	position: relative;
 	opacity:0.70;
 	background-position: center;
@@ -156,22 +157,22 @@ main {
 	min-height: 400px;
 }
 
-.section{
+.section {
 	text-align: center;
 	padding: 50px 80px;
 }
 
-.section-light{
+.section-light {
 	background-color:#f4f4f4;
 	color:#666;
 }
 
-.section-dark{
+.section-dark {
 	background-color:#282e34;
 	color:#ddd;
 }
 
-.ptext{
+.ptext {
 	position:absolute;
 	top:50%;
 	width: 100%;
@@ -182,7 +183,7 @@ main {
 	text-transform: uppercase;
 }
 
-.ptext .border{
+.ptext .border {
 	background-color: #111;
 	color:#fff;
 	padding: 20px;
@@ -207,7 +208,9 @@ main {
 			padding: 0.5rem 1.5;
 			background: $secondary-color;
 			color: set-text-color($secondary-color);
-
+			span {
+				color: set-text-color($secondary-color);
+			}
 		}
 	}
 }
@@ -216,26 +219,25 @@ main {
 .btn {
 	display: block;
 	padding: 0.5rem 1rem;
-	border: 0;
+	//border: 0;
 	margin-bottom: 0.3rem;
-	&hover {
+	&:hover {
 		background: $secondary-color;
 		color: set-text-color($secondary-color);
-		span {
-			color: set-text-color($secondary-color);
-		}
 	}
 }
 
 .btn-dark {
 	@extend .btn;
 	background: darken($primary-color, 50);
+	border:#fff 2px solid;
 	color: #fff;
 }
 
 .btn-light {
 	@extend .btn;
 	background: lighten($primary-color, 50);
+	border:#333 2px solid;
 	color: #333;
 }
 
