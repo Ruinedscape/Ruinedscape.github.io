@@ -1,4 +1,4 @@
-$portrait-image: url(../img/portrait.jpg);
+$portrait-image: url(../img/cat2.jpg);
 
 // Menu button
 .menu-btn {
@@ -17,24 +17,24 @@ $portrait-image: url(../img/portrait.jpg);
 		@include easeOut;
 	}
 
-	// Rotate Into X With Menu Lines
+	// Rotate Into a triangle With Menu Lines
 	&.close {
 		transform: rotate(180deg);
 
 		.btn-line {
-			// Line 1 - Rotate
+			// Line 1
 			&:nth-child(1) {
-				transform: rotate(45deg) translate(5px, 5px);
+				transform: rotate(120deg) translate(14px, -15px);
 			}
 
-			// Line 2 - Hide
+			// Line 2
 			&:nth-child(2) {
-				opacity: 0;
+				opacity: 1;
 			}
 
-			// Line 3 - Rotate
+			// Line 3
 			&:nth-child(3) {
-				transform: rotate(-45deg) translate(7px, -6px);
+				transform: rotate(-120deg) translate(-0px, -8px);
 			}
 		}
 	}
@@ -69,7 +69,7 @@ $portrait-image: url(../img/portrait.jpg);
 		padding: 0;
 		background: darken($primary-color, 5);
 		list-style: none;
-		transform: translate3d(0, -100%, 0); //prosentti = suunta
+		transform: translate3d(100%, 0, 0);
 		@include easeOut;
 
 		&.show {
@@ -82,7 +82,7 @@ $portrait-image: url(../img/portrait.jpg);
 	// Branding Side
 	&-branding {
 		background: $primary-color;
-		transform: translate3d(0, 100%, 0);
+		transform: translate3d(-100%, 0, 0);
 		@include easeOut;
 		
 		&.show {
@@ -131,7 +131,7 @@ $portrait-image: url(../img/portrait.jpg);
 
 // Delay each nav item slide by 0.1s
 
-@for $x from 1 through 4 {
+@for $x from 1 through 5 {
 	.nav-item:nth-child(#{$x}) {
 		transition-delay: $x * 0.1s;
 	}

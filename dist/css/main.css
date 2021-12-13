@@ -14,11 +14,11 @@
   .menu-btn.close {
     transform: rotate(180deg); }
     .menu-btn.close .btn-line:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px); }
+      transform: rotate(120deg) translate(14px, -15px); }
     .menu-btn.close .btn-line:nth-child(2) {
-      opacity: 0; }
+      opacity: 1; }
     .menu-btn.close .btn-line:nth-child(3) {
-      transform: rotate(-45deg) translate(7px, -6px); }
+      transform: rotate(-120deg) translate(0px, -8px); }
 
 .menu {
   position: fixed;
@@ -40,31 +40,31 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #ff76dd;
+    background: #6bd5ff;
     list-style: none;
-    transform: translate3d(0, -100%, 0);
+    transform: translate3d(100%, 0, 0);
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #ff8fe3;
-    transform: translate3d(0, 100%, 0);
+    background: #84dcff;
+    transform: translate3d(-100%, 0, 0);
     transition: all 0.5s ease-out; }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
     .menu-branding .portrait {
       width: 250px;
       height: 250px;
-      background: url(../img/portrait.jpg);
+      background: url(../img/cat2.jpg);
       border-radius: 50%;
-      border: solid 3px #ff31a2; }
+      border: solid 3px #2f00af; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #ff31a2; }
+      color: #2f00af; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -76,7 +76,7 @@
     text-decoration: none;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
-      color: #ff31a2; }
+      color: #2f00af; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -90,18 +90,21 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
+.nav-item:nth-child(5) {
+  transition-delay: 0.5s; }
+
 * {
   box-sizing: border-box; }
 
 body {
-  background: #ff8fe3;
+  background: #84dcff;
   color: #000;
   height: 100%;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: url(../img/background.jpg);
+    background: url(../img/cat1.jpg);
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
@@ -112,7 +115,7 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(255, 143, 227, 0.9); }
+      background: rgba(132, 220, 255, 0.7); }
 
 h1, h2, h3 {
   margin: 0;
@@ -122,7 +125,8 @@ h1, h2, h3 {
   h1.sm-heading, h2.sm-heading, h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(255, 153, 230, 0.5); }
+    background: black;
+    color: #fff; }
 
 a {
   color: #fff;
@@ -134,17 +138,18 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #ff31a2; }
+  color: #2f00af; }
 
 main {
   padding: 4rem;
+  height: 100%;
   min-height: calc(100vh - 60px); }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
-        color: #ff31a2;
+        color: #2f00af;
         transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }
@@ -154,14 +159,14 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
+  grid-template-areas: 'bio bio bioimage' 'job1 job2 job3';
   grid-template-columns: repeat(3, 1fr); }
 
 .bio-image {
   grid-area: bioimage;
   margin: auto;
   border-radius: 50%;
-  border: #ff31a2 3px solid; }
+  border: #2f00af 3px solid; }
 
 .bio {
   grid-area: bio;
@@ -177,9 +182,10 @@ main {
   grid-area: job3; }
 
 .job {
-  background: #ff8fe3;
+  background: #84dcff;
   padding: 0.5rem;
-  border-bottom: #ff31a2 5px solid; }
+  border-bottom: #2f00af 5px solid;
+  font-size: 1.1rem; }
 
 .projects {
   display: grid;
@@ -190,8 +196,55 @@ main {
     border: 3px #fff solid; }
     .projects img:hover {
       opacity: 0.5;
-      border-color: #ff31a2;
+      border-color: #2f00af;
       transition: all 0.5s ease-out; }
+
+.pimg1, .pimg2, .pimg3 {
+  position: relative;
+  opacity: 0.70;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+
+.pimg1 {
+  background-image: url("../img/work1.jpg");
+  min-height: 500px; }
+
+.pimg2 {
+  background-image: url("../img/work2.jpg");
+  min-height: 400px; }
+
+.pimg3 {
+  background-image: url("../img/work4.jpg");
+  min-height: 400px; }
+
+.section {
+  text-align: center;
+  padding: 50px 80px; }
+
+.section-light {
+  background-color: #f4f4f4;
+  color: #666; }
+
+.section-dark {
+  background-color: #282e34;
+  color: #ddd; }
+
+.ptext {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-size: 27px;
+  letter-spacing: 8px;
+  text-transform: uppercase; }
+
+.ptext .border {
+  background-color: #111;
+  color: #fff;
+  padding: 20px; }
 
 .boxes {
   display: flex;
@@ -207,8 +260,8 @@ main {
     transition: all 0.5s ease-out; }
     .boxes div:hover {
       padding: 0.5rem 1.5;
-      background: #ff31a2;
-      color: #000; }
+      background: #2f00af;
+      color: #fff; }
 
 .btn, .btn-dark, .btn-light {
   display: block;
@@ -216,13 +269,13 @@ main {
   border: 0;
   margin-bottom: 0.3rem; }
   .btnhover {
-    background: #ff31a2;
-    color: #000; }
+    background: #2f00af;
+    color: #fff; }
     .btnhover span {
-      color: #000; }
+      color: #fff; }
 
 .btn-dark {
-  background: #8f006b;
+  background: #005e84;
   color: #fff; }
 
 .btn-light {
@@ -232,7 +285,7 @@ main {
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: #ff5cd6;
+  background: #51cdff;
   color: #000;
   height: 60px; }
 
@@ -265,7 +318,7 @@ main {
     height: 25vh;
     transform: translate3d(100%, 0, 0); }
     .menu-branding .portrait {
-      background: url(../img/portrait_small.jpg);
+      background: url(../img/cat2-small.jpg);
       width: 150px;
       height: 150px; }
   .about-info {
@@ -278,4 +331,6 @@ main {
   main#home h1 {
     margin-top: 10vh; }
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .pimg1, .pimg2, .pimg3 {
+    background-attachment: scroll; } }
